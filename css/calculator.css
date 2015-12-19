@@ -1,0 +1,31 @@
+#calculator {
+  width: 400px;
+  height: 200px;
+  margin: 30px auto;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+#calculator th {
+  width: 100%;
+  padding: 4px 8px;
+  vertical-align: middle;
+  border: 1px solid silver;
+}
+
+#calculator td {
+  width: 25%;
+  text-align: center;
+  border: 1px solid silver;
+}
+
+#calculator td:hover {
+  background-color: whitesmoke;
+}
+
+#result {
+  width: 100%;
+  padding: 0;
+  text-align: right;
+  border: 0;
+}

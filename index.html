@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <title>Flat Calculator</title>
+  <link href='css/calculator.css' rel='stylesheet' />
+</head>
+<body>
+  <div id='calculator_app'></div>
+  <script id='calculator_template' type='text/ractive'>
+    <table id='calculator'>
+      <th colspan='4'>
+        <form on-submit='submit(event)'>
+          <input id='result' type='text' value='{{result}}' />
+        </form>
+      </th>
+      {{#each buttons:y}}
+      <tr>
+        {{#each buttons[y]:x}}
+        <td on-click='click(x, y)'>{{buttons[y][x]}}</td>
+        {{/each}}
+      </tr>
+      {{/each}}
+    </table>
+  </script>
+  <script src='http://cdn.ractivejs.org/latest/ractive.js'></script>
+  <script src='js/calculator.js'></script>
+</body>
+</html>
