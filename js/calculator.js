@@ -1,5 +1,6 @@
 (function() {
   var DEFAULT_BUTTONS = [
+    ['C', '±', ' ', '←'],
     ['7', '8', '9', '/'],
     ['4', '5', '6', '*'],
     ['1', '2', '3', '-'],
@@ -28,6 +29,25 @@
     },
 
     special_buttons: {
+      ' ': function() {
+      },
+      'C': function() {
+        this.set('result', '');
+      },
+      '←': function() {
+        var result = this.get('result');
+        result = result.substr(0, result.length - 1);
+        this.set('result', result);
+      },
+      '±': function() {
+        var result = this.get('result');
+        if (result.match(/^-/)) {
+          result = result.substr(1)
+        } else {
+          result = '-' + result
+        }
+        this.set('result', result);
+      },
       '=': function() {
         this.calculate();
       },
