@@ -24,6 +24,10 @@
       this.calculate();
     },
 
+    clear: function() {
+      this.set('result', '');
+    },
+
     backspace: function() {
       var result = this.get('result');
       result = result.substr(0, result.length - 1);
@@ -38,7 +42,7 @@
       ' ': function() {
       },
       'C': function() {
-        this.set('result', '');
+        this.clear();
       },
       '←': function() {
         this.backspace();
