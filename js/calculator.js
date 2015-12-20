@@ -1,5 +1,6 @@
 (function() {
   var DEFAULT_BUTTONS = [
+    ['C', ' ', ' ', ' '],
     ['7', '8', '9', '/'],
     ['4', '5', '6', '*'],
     ['1', '2', '3', '-'],
@@ -28,6 +29,11 @@
     },
 
     special_buttons: {
+      ' ': function() {
+      },
+      'C': function() {
+        this.set('result', '');
+      },
       '=': function() {
         this.calculate();
       },
