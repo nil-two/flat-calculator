@@ -1,6 +1,6 @@
 (function() {
   var DEFAULT_BUTTONS = [
-    ['C', ' ', ' ', ' '],
+    ['C', ' ', ' ', '←'],
     ['7', '8', '9', '/'],
     ['4', '5', '6', '*'],
     ['1', '2', '3', '-'],
@@ -33,6 +33,11 @@
       },
       'C': function() {
         this.set('result', '');
+      },
+      '←': function() {
+        var result = this.get('result');
+        result = result.substr(0, result.length - 1);
+        this.set('result', result);
       },
       '=': function() {
         this.calculate();
