@@ -24,6 +24,12 @@
       this.calculate();
     },
 
+    backspace: function() {
+      var result = this.get('result');
+      result = result.substr(0, result.length - 1);
+      this.set('result', result);
+    },
+
     calculate: function() {
       this.set('result', eval(this.get('result')));
     },
@@ -35,9 +41,7 @@
         this.set('result', '');
       },
       '←': function() {
-        var result = this.get('result');
-        result = result.substr(0, result.length - 1);
-        this.set('result', result);
+        this.backspace();
       },
       '±': function() {
         var result = this.get('result');
