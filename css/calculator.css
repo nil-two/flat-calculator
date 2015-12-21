@@ -30,3 +30,16 @@
   font-size: 1.5em;
   border: 0;
 }
+
+@media screen and (max-width: 500px) {
+  html, body, #calculator_app {
+    height: 100%;
+    margin: 0px;
+  }
+
+  #calculator {
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+  }
+}
