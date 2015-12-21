@@ -1,6 +1,6 @@
 #calculator {
-  width: 400px;
-  height: 250px;
+  width: 450px;
+  height: 300px;
   margin: 30px auto;
   border-spacing: 0;
   border-collapse: collapse;
@@ -27,5 +27,23 @@
   width: 100%;
   padding: 0;
   text-align: right;
+  font-size: 1.5em;
   border: 0;
+}
+
+@media screen and (max-width: 500px) {
+  html, body, #calculator_app {
+    height: 100%;
+    margin: 0px;
+  }
+
+  #calculator {
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+  }
+
+  #calculator th {
+    height: 25%;
+  }
 }

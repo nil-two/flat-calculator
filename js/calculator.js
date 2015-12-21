@@ -24,6 +24,26 @@
       this.calculate();
     },
 
+    clear: function() {
+      this.set('result', '');
+    },
+
+    backspace: function() {
+      var result = this.get('result');
+      result = result.substr(0, result.length - 1);
+      this.set('result', result);
+    },
+
+    toggle_sign: function() {
+      var result = this.get('result');
+      if (result.match(/^-/)) {
+        result = result.substr(1);
+      } else {
+        result = '-' + result;
+      }
+      this.set('result', result);
+    },
+
     calculate: function() {
       this.set('result', eval(this.get('result')));
     },
@@ -32,21 +52,13 @@
       ' ': function() {
       },
       'C': function() {
-        this.set('result', '');
+        this.clear();
       },
       '←': function() {
-        var result = this.get('result');
-        result = result.substr(0, result.length - 1);
-        this.set('result', result);
+        this.backspace();
       },
       '±': function() {
-        var result = this.get('result');
-        if (result.match(/^-/)) {
-          result = result.substr(1)
-        } else {
-          result = '-' + result
-        }
-        this.set('result', result);
+        this.toggle_sign();
       },
       '=': function() {
         this.calculate();
