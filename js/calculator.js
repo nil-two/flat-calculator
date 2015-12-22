@@ -45,7 +45,7 @@
     },
 
     calculate: function() {
-      this.set('result', eval(this.get('result')));
+      this.set('result', eval(this.get('result')).toString());
     },
 
     special_buttons: {
