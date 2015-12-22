@@ -31,7 +31,7 @@
   border: 0;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (min-device-width: 0px) and (max-device-width: 1023px) {
   html, body, #calculator_app {
     height: 100%;
     margin: 0px;
