@@ -12,11 +12,10 @@
 
     click: function(x, y) {
       var button = this.get('buttons')[y][x];
-      if (this.special_buttons[button]) {
+      if (this.special_buttons[button])
         this.special_buttons[button].bind(this)();
-      } else {
+      else
         this.set('result', this.get('result') + button);
-      }
     },
 
     submit: function(event) {
@@ -36,11 +35,10 @@
 
     toggle_sign: function() {
       var result = this.get('result');
-      if (result.match(/^-/)) {
+      if (result.match(/^-/))
         result = result.substr(1);
-      } else {
+      else
         result = '-' + result;
-      }
       this.set('result', result);
     },
 
