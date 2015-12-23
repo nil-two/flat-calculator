@@ -9,12 +9,8 @@
 <body>
   <div id='calculator_app'></div>
   <script id='calculator_template' type='text/ractive'>
-    <table id='calculator'>
-      <th colspan='4'>
-        <form on-submit='submit(event)'>
-          <input id='result' type='text' value='{{result}}' />
-        </form>
-      </th>
+    <input id='result' on-enter='calculate()' type='text' value='{{result}}' />
+    <table id='buttons'>
       {{#each buttons:y}}
       <tr>
         {{#each buttons[y]:x}}
@@ -25,6 +21,7 @@
     </table>
   </script>
   <script src='js/ractive.min.js'></script>
+  <script src='js/ractive-events-keys.js'></script>
   <script src='js/calculator.js'></script>
 </body>
 </html>
