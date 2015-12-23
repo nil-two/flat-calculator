@@ -11,9 +11,7 @@
   <script id='calculator_template' type='text/ractive'>
     <table id='calculator'>
       <th colspan='4'>
-        <form on-submit='submit(event)'>
-          <input id='result' type='text' value='{{result}}' />
-        </form>
+        <input id='result' on-enter='calculate()' type='text' value='{{result}}' />
       </th>
       {{#each buttons:y}}
       <tr>
