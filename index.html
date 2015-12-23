@@ -9,12 +9,8 @@
 <body>
   <div id='calculator_app'></div>
   <script id='calculator_template' type='text/ractive'>
-    <table id='calculator'>
-      <tr>
-        <th colspan='4'>
-          <input id='result' on-enter='calculate()' type='text' value='{{result}}' />
-        </th>
-      </tr>
+    <input id='result' on-enter='calculate()' type='text' value='{{result}}' />
+    <table id='buttons'>
       {{#each buttons:y}}
       <tr>
         {{#each buttons[y]:x}}
