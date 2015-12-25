@@ -11,13 +11,15 @@
   <script id='calculator_template' type='text/ractive'>
     <input id='result' on-enter='calculate()' type='text' value='{{result}}' />
     <table id='buttons'>
-      {{#each buttons:y}}
-      <tr>
-        {{#each buttons[y]:x}}
-        <td on-click='click(x, y)'>{{buttons[y][x]}}</td>
+      <tbody>
+        {{#each buttons:y}}
+        <tr>
+          {{#each buttons[y]:x}}
+          <td on-click='click(x, y)'>{{buttons[y][x]}}</td>
+          {{/each}}
+        </tr>
         {{/each}}
-      </tr>
-      {{/each}}
+      </tbody>
     </table>
   </script>
   <script src='js/ractive.min.js'></script>
