@@ -18,11 +18,6 @@
         this.set('result', this.get('result') + button);
     },
 
-    submit: function(event) {
-      event.original.preventDefault();
-      this.calculate();
-    },
-
     clear: function() {
       this.set('result', '');
     },
