@@ -12,15 +12,10 @@
 
     click: function(x, y) {
       var button = this.get('buttons')[y][x];
-      if (this.special_buttons[button])
-        this.special_buttons[button].bind(this)();
+      if (this.specialButtons[button])
+        this.specialButtons[button].bind(this)();
       else
         this.set('result', this.get('result') + button);
-    },
-
-    submit: function(event) {
-      event.original.preventDefault();
-      this.calculate();
     },
 
     clear: function() {
@@ -33,7 +28,7 @@
       this.set('result', result);
     },
 
-    toggle_sign: function() {
+    toggleSign: function() {
       var result = this.get('result');
       if (result.match(/^-/))
         result = result.substr(1);
@@ -46,7 +41,7 @@
       this.set('result', eval(this.get('result')).toString());
     },
 
-    special_buttons: {
+    specialButtons: {
       ' ': function() {
       },
       'C': function() {
@@ -56,7 +51,7 @@
         this.backspace();
       },
       '±': function() {
-        this.toggle_sign();
+        this.toggleSign();
       },
       '=': function() {
         this.calculate();
