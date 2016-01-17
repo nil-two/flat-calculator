@@ -15,7 +15,7 @@
         {{#each buttons:y}}
         <tr>
           {{#each buttons[y]:x}}
-          <td on-click='click(x, y)'>{{buttons[y][x]}}</td>
+          <td on-tap='tap(x, y)'>{{buttons[y][x]}}</td>
           {{/each}}
         </tr>
         {{/each}}
@@ -24,6 +24,7 @@
   </script>
   <script src='js/ractive.min.js'></script>
   <script src='js/ractive-events-keys.js'></script>
+  <script src='js/ractive-events-tap.umd.js'></script>
   <script src='js/calculator.js'></script>
 </body>
 </html>
