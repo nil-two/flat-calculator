@@ -15,7 +15,7 @@
         {{#each buttons:y}}
         <tr>
           {{#each buttons[y]:x}}
-          <td on-tap='click(x, y)'>{{buttons[y][x]}}</td>
+          <td on-tap='tap(x, y)'>{{buttons[y][x]}}</td>
           {{/each}}
         </tr>
         {{/each}}

@@ -10,7 +10,7 @@
   var Calculator = Ractive.extend({
     template: '#calculator_template',
 
-    click: function(x, y) {
+    tap: function(x, y) {
       var button = this.get('buttons')[y][x];
       if (this.specialButtons[button])
         this.specialButtons[button].bind(this)();
