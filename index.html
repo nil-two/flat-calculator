@@ -9,13 +9,13 @@
 <body>
   <div id='calculator_app'></div>
   <script id='calculator_template' type='text/ractive'>
-    <input id='result' on-enter='calculate()' type='text' value='{{result}}' />
-    <table id='buttons'>
+    <input class='result' on-enter='calculate()' type='text' value='{{result}}' />
+    <table class='buttons'>
       <tbody>
         {{#each buttons:y}}
         <tr>
           {{#each buttons[y]:x}}
-          <td on-tap='tap(x, y)'>{{buttons[y][x]}}</td>
+          <td class='button' on-tap='tap(x, y)'>{{buttons[y][x]}}</td>
           {{/each}}
         </tr>
         {{/each}}
