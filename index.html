@@ -1,30 +1,30 @@
 <!DOCTYPE html>
-<html lang='en'>
+<html lang="en">
 <head>
-  <meta charset='UTF-8'>
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Flat Calculator</title>
-  <link href='css/calculator.css' rel='stylesheet' />
+  <link href="css/calculator.css" rel="stylesheet" />
 </head>
 <body>
-  <div id='calculator_app'></div>
-  <script id='calculator_template' type='text/ractive'>
-    <input class='result' on-enter='calculate()' type='text' value='{{result}}' />
-    <table class='buttons'>
+  <div id="calculator_app"></div>
+  <script id="calculator_template" type="text/ractive">
+    <input class="result" on-enter="calculate()" type="text" value="{{result}}" />
+    <table class="buttons">
       <tbody>
         {{#each buttons:y}}
         <tr>
           {{#each buttons[y]:x}}
-          <td class='button' on-tap='tap(x, y)'>{{buttons[y][x]}}</td>
+          <td class="button" on-tap="tap(x, y)">{{buttons[y][x]}}</td>
           {{/each}}
         </tr>
         {{/each}}
       </tbody>
     </table>
   </script>
-  <script src='js/ractive.min.js'></script>
-  <script src='js/ractive-events-keys.js'></script>
-  <script src='js/ractive-events-tap.umd.js'></script>
-  <script src='js/calculator.js'></script>
+  <script src="js/ractive.min.js"></script>
+  <script src="js/ractive-events-keys.js"></script>
+  <script src="js/ractive-events-tap.umd.js"></script>
+  <script src="js/calculator.js"></script>
 </body>
 </html>
