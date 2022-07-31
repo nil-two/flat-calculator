@@ -2,9 +2,9 @@ Flat Calculator
 ===============
 
 Small calculator.
-App is [here](http://kusabashira.github.io/flat-calculator/).
+App is [here](http://nil2nekoni.github.io/flat-calculator/).
 
-![screenshot](https://raw.githubusercontent.com/kusabashira/ss/master/flat-calculator/app.png)
+![screenshot](https://raw.githubusercontent.com/nil2nekoni2/ss/master/flat-calculator/app.png)
 
 License
 -------
@@ -14,4 +14,4 @@ MIT License
 Author
 ------
 
-kusabashira <kusabashira227@gmail.com>
+nil2 <nil2@nil2.org>
