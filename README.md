@@ -2,9 +2,9 @@ Flat Calculator
 ===============
 
 Small calculator.
-App is [here](http://nil2nekoni.github.io/flat-calculator/).
+App is [here](http://nil-two.github.io/flat-calculator/).
 
-![screenshot](https://raw.githubusercontent.com/nil2nekoni2/ss/master/flat-calculator/app.png)
+![screenshot](https://raw.githubusercontent.com/nil-two/ss/master/flat-calculator/app.png)
 
 License
 -------
